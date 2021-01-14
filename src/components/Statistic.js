@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import styled from 'styled-components';
 
 const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
-        <ul>
+        <StyledUl>
             <li>Good: <span>{good}</span></li>
             <li>Neutral: <span>{neutral}</span></li>
             <li>Bad: <span>{bad}</span></li>
             <li>Total: <span>{total}</span></li>
             <li>Positive feedback: <span>{total ? positivePercentage : 0}%</span></li>
-        </ul>
+        </StyledUl>
     )
 }
 
@@ -23,3 +23,7 @@ Statistic.propTypes = {
     total: PropTypes.number,
     positivePercentage: PropTypes.number,
 };
+
+const StyledUl = styled.ul`
+padding: 0;
+`;

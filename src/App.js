@@ -14,9 +14,7 @@ export default class App extends Component {
 
   addStatistic = (evt) => {
     const name = evt.target.name;
-    this.setState((prev) => {
-      return {[name] : prev[name] +1}
-    })
+    this.setState((prev) => ({[name] : prev[name] +1}))
   }
  
   countTotalFeedback = () => {
