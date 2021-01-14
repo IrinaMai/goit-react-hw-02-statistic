@@ -1,11 +1,11 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({onLeaveFeedback}) => {
+const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return (
         <>
-        <button type="button" name="good" onClick = {onLeaveFeedback}>Good</button>
-        <button type="button" name="neutral" onClick = {onLeaveFeedback} >Neutral</button>
-        <button type="button" name="bad" onClick = {onLeaveFeedback}>Bad</button>
+            {Object.keys(options).map(item => <button key = {item} type="button" name={item} onClick = {onLeaveFeedback}>{item.toUpperCase()}</button>)}
+  
         </>
     )
 }
