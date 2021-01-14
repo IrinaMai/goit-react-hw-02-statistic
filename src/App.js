@@ -39,15 +39,12 @@ export default class App extends Component {
           <FeedbackOptions options={this.state} onLeaveFeedback={this.addStatistic}/>
          </Section>
 
-
         <Section title="Statistics">
-          
        {this.countTotalFeedback()? <Statistic {...this.state}
           total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage() }
+          positivePercentage={this.countPositiveFeedbackPercentage()}
           /> : <Notification message ="No feedback given"/>}
       </Section>
-
   </>
     )
   }
